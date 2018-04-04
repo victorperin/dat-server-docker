@@ -1,0 +1,18 @@
+image: docker
+
+variables:
+  DOCKER_cmsR: overlay2
+
+services:
+  - docker:dind
+
+before_script:
+  - docker login -u "$DOCKERHUB_LOGIN" -p "$DOCKERHUB_PASSWORD"
+
+deploy:
+  stage: publish
+  script:
+    - docker build -t victorperin/dpcler-dat-server:$CI_PIPELINE_ID .
+    - docker push victorperin/dpcler-dat-server:$CI_PIPELINE_ID
+  only:
+    - master
