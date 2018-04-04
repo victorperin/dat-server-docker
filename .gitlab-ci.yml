@@ -12,7 +12,7 @@ before_script:
 deploy:
   stage: publish
   script:
-    - docker build -t victorperin/dpcler-dat-server:$CI_PIPELINE_ID .
-    - docker push victorperin/dpcler-dat-server:$CI_PIPELINE_ID
+    - docker build -t victorperin/docker-dat-server:$CI_PIPELINE_ID .
+    - docker push victorperin/docker-dat-server:$CI_PIPELINE_ID
   only:
     - master
