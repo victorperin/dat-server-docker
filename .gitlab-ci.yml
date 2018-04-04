@@ -10,7 +10,7 @@ before_script:
   - docker login -u "$DOCKERHUB_LOGIN" -p "$DOCKERHUB_PASSWORD"
 
 deploy:
-  stage: publish
+  stage: deploy
   script:
     - docker build -t victorperin/docker-dat-server:$CI_PIPELINE_ID .
     - docker push victorperin/docker-dat-server:$CI_PIPELINE_ID
