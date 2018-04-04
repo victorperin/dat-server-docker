@@ -1,0 +1,6 @@
+{
+  "name": "docker-dat-server",
+  "url": "dat://a1ac59d2efcf6d4356bdabecfdfdf32a19649a9c0b37aaddaa659fbfe6e80207",
+  "title": "docker-dat-server",
+  "description": "An dat server inside docker image"
+}
