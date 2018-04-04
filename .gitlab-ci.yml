@@ -14,5 +14,7 @@ deploy:
   script:
     - docker build -t victorperin/dat-server:$CI_PIPELINE_ID .
     - docker push victorperin/dat-server:$CI_PIPELINE_ID
+    - docker build -t victorperin/dat-server .
+    - docker push victorperin/dat-server
   only:
     - master
